@@ -1,73 +1,109 @@
-# Task 4: Dockerized Nginx Website
+Task 4: Version-Controlled DevOps Project with Git
+🚀 Project Overview
 
-## Project Overview
-This project demonstrates deploying a full website using **Docker** and **Nginx**.  
-It includes HTML, CSS, JS, and images, fully versioned using Git. The project showcases best practices in DevOps including Docker containerization, version control, and website deployment.
+This project demonstrates best practices in version control using Git and GitHub for a DevOps workflow.
+It includes:
 
-## Key Features
-- Full website deployment with Nginx in Docker
-- Includes HTML, CSS, JS, and images
-- Docker image tagged with versioning (e.g., `polk-1.0.7`)
-- Git version control with proper commits and README documentation
-- Easily reproducible environment for testing and development
+A local Docker container running Nginx with a sample website (index.html and assets).
 
-## Project Structure
+Proper branching workflow: main, dev, feature/*.
 
-| File/Folder | Description |
-|-------------|-------------|
-| `index.html` | Main landing page of the website |
-| `about.html` | About page |
-| `contact.html` | Contact page |
-| `design.html` | Design page |
-| `company.html` | Company info page |
-| `news.html` | News page |
-| `css/` | All CSS files |
-| `js/` | JavaScript files |
-| `images/` | All images used in the website |
-| `Dockerfile` | Dockerfile to build Nginx container |
-| `README.md` | Project documentation |
-| `.gitignore` | Ignore unnecessary files and folders |
+Demonstration of pull requests, merges, and tagging.
 
-## Prerequisites
-- Docker installed on your machine
-- Basic knowledge of Docker and Nginx
-- Git installed for version control
+Clear documentation using Markdown for task tracking.
 
-## How to Build and Run
+🛠 Tools & Technologies
 
-1. **Build Docker image:**
-```bash
+Git: version control and branching.
 
-docker build --no-cache -t task4-nginx:polk-1.0.7 .
-Stop and remove old container if exists:
-docker ps -q --filter "name=task4-nginx" | xargs -r docker stop
-docker ps -aq --filter "name=task4-nginx" | xargs -r docker rm
+GitHub: remote repository and pull request management.
 
-Run the container:
-docker run -d --name task4-nginx -p 8081:80 task4-nginx:polk-1.0.7
+Docker: containerization of the website.
 
-Open website in browser:
+Nginx: web server to host index.html.
 
-arduino
-Copy code
+🌳 Branching Workflow
+Branch	Purpose
+main	Production-ready code
+dev	Development integration branch
+feature/*	Individual feature/bugfix branches
+
+Workflow:
+
+Branch off dev to create feature/*.
+
+Commit changes frequently.
+
+Push the feature branch to GitHub.
+
+Open a pull request to merge into dev.
+
+After testing in dev, merge into main.
+
+Tag releases for versioning, e.g., v1.0.0.
+
+📂 Project Structure
+File / Folder	Description
+Dockerfile	Builds Docker image with Nginx and website
+index.html	Main web page
+css/	Stylesheets for website
+js/	JavaScript files
+images/	Website images and icons
+.gitignore	Excludes logs, state files, and unnecessary files
+README.md	This documentation
+TASKS.md	Task progress and details
+📝 Git & GitHub Best Practices
+
+Feature branches for each task.
+
+Pull requests for code review and merging.
+
+Commit messages follow conventional style:
+
+feat: add version info to index page
+chore: initial commit – add Dockerfile, README, .gitignore
+
+
+Clean up merged feature branches to keep repo tidy.
+
+🐳 Docker Instructions
+
+Build Docker image:
+
+docker build -t task4-nginx:polk-1.0.6 .
+
+
+Run container:
+
+docker run -d -p 8081:80 task4-nginx:polk-1.0.6
+
+
+Open in browser:
+
 http://localhost:8081
-Notes for Reviewers
-The project is fully containerized, making it easy to run on any system with Docker.
 
-All website assets (HTML, CSS, JS, images) are included in the Docker image.
 
-Git commits and version tags demonstrate proper DevOps workflow.
+Stop container:
 
-Skills Demonstrated
-Docker containerization
+docker stop <container_id>
 
-Nginx web server deployment
+🏷 Versioning
 
-Git version control and branching
+v1.0.0 → Initial release of Task 4 project
 
-Project documentation and DevOps workflow understanding
+Tags maintained in Git for traceability and reproducibility.
 
-Author / Contact
+✅ Notes for HR / Reviewers
+
+All tasks are reproducible on any system with Git, Docker, and Nginx installed.
+
+The project demonstrates DevOps workflow: branching, PRs, merges, Docker containerization, and deployment.
+
+Repository is clean, organized, and professional for review.
+
+📧 Contact / Author
+
 Ashok Jangid
 GitHub: https://github.com/Aj4236
+
 Email: Ajdevops65@gmail.com
