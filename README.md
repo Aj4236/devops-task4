@@ -1,5 +1,7 @@
 Task 4: Version-Controlled DevOps Project with Git
 🚀 Project Overview
+To view your website in a browser, simply open this link:
+https://aj4236.github.io/devops-task4/
 
 This project demonstrates best practices in version control using Git and GitHub for a DevOps workflow.
 It includes:
